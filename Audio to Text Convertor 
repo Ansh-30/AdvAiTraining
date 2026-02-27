@@ -1,0 +1,78 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMScY99q/KfkS0g5I/Y/ErK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ansh-30/AdvAiTraining/blob/main/Audio%20to%20Text%20Convertor%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "uW3SpOLCEMAC"
+      },
+      "outputs": [],
+      "source": [
+        "#create audio to text using whisper model and upload the code to github repo"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install openai-whisper\n",
+        "!apt install ffmpeg\n",
+        "\n",
+        "import whisper\n",
+        "from google.colab import files\n",
+        "\n",
+        "# to select model name\n",
+        "model = whisper.load_model(\"base\")\n",
+        "\n",
+        "#to upload the audio file\n",
+        "uploaded = files.upload()\n",
+        "\n",
+        "#convert audio to text\n",
+        "audio = list(uploaded.keys())[0]\n",
+        "result = model.transcribe(audio)\n",
+        "\n",
+        "#print the text from audio\n",
+        "print(result[\"text\"])\n"
+      ],
+      "metadata": {
+        "id": "NLneqIbbJGqb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "jOMK1dSjJK46"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
